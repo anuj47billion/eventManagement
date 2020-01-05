@@ -1,34 +1,11 @@
-const express = require('express');
-const app = express();
-const db = require('./util/database');
+// import app from './config/express';
+const app = require('./config/express');
+const db = require('./config/db');
+const config = require('./env');
 
-const sequelize = require('./src/data/sequelize_connection');
+const port = process.env.PORT || config.PORT;
 
-sequelize.authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully.');
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
-
-// db.execute('SELECT * FROM users')
-//   .then(result => {
-//     console.log(result);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
-
-app.set('port', process.env.PORT || 8000);
-
-app.get('/', function(req, res){
-    res.send('hello world');
+// connecting the database
+db.sequelize.sync().then(() => {
+  app.listen(port);
 });
-
-app.listen(app.get('port'));
-
-// app.get('/', (req, res) => res.send('Hello World!'))
-
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`))
