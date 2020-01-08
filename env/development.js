@@ -8,6 +8,7 @@ const devConfig = {
   DATABASE_PASSWORD: process.env.DATABASE_PASSWORD || '',
   DATABASE_PORT: process.env.DATABASE_PORT || 3306,
   DATABASE_DIALECT: process.env.DATABASE_DIALECT || 'mysql',
+  APP_SECRET: '0a6b944d-d2fb-46fc-a85e-0295c986cd9f',
   TOKEN_LIFE: 604800, // in seconds i.e 7 days
   // MAIL_ID: 'example@gmail.com',
   // MAIL_PASS: '123456789',
