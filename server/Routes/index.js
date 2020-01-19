@@ -1,5 +1,7 @@
 const express = require('express');
 const userRoutes = require('./User');
+const moduleRoutes = require('./Module');
+const testimonialRoutes = require('./Testimonial');
 const ResponseObject = require('../Helpers/ResponseObject');
 
 const router = express.Router();
@@ -13,5 +15,11 @@ router.get('/welcome', (req, res) =>
 
 // mount user routes at /users
 router.use('/users', userRoutes);
+
+// mount module routes at /modules
+router.use('/modules', moduleRoutes);
+
+// mount module routes at /testimonials
+router.use('/testimonials', testimonialRoutes);
 
 module.exports = router;

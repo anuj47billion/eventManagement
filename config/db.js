@@ -2,6 +2,9 @@ const Sequelize = require('sequelize');
 const env = require('../env');
 
 const User = require('../server/Models/users');
+const Module = require('../server/Models/modules');
+const Testimonial = require('../server/Models/testimonials');
+const Product = require('../server/Models/products');
 
 const Op = Sequelize.Op;
 const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {
@@ -27,6 +30,9 @@ const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DA
 
 const models = {
   Users: User(sequelize, Sequelize),
+  Modules: Module(sequelize, Sequelize),
+  Testimonials: Testimonial(sequelize, Sequelize),
+  Products: Product(sequelize, Sequelize),
 };
 
 Object.values(models)
