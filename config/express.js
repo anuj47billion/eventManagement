@@ -1,15 +1,10 @@
-const express = require('express');
-const logger = require('morgan');
-const bodyParser = require('body-parser');
-const config = require('../env');
-const cors = require('cors');
-const routes = require('../server/Routes');
+import express from 'express';
+import bodyParser from 'body-parser';
+import config from '../env';
+import cors from 'cors';
+import routes from '../server/Routes';
 
 const app = express();
-
-if (config.NODE_ENV === 'development') {
-  app.use(logger('dev'));
-}
 
 // parse body params and attache them to req.body
 app.use(bodyParser.json());
@@ -29,4 +24,4 @@ app.use(cors({
 
 }));
 
-module.exports = app;
+export default app;

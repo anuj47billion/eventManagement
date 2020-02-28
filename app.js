@@ -1,7 +1,6 @@
-// import app from './config/express';
-const app = require('./config/express');
-const db = require('./config/db');
-const config = require('./env');
+import app from './config/express';
+import db from './config/db';
+import config from './env';
 
 const port = process.env.PORT || config.PORT;
 
