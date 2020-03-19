@@ -7,4 +7,4 @@
    root: path.join(__dirname, '/..')
  };
 
- module.exports = Object.assign(defaults, config);;
+ export default Object.assign(defaults, config);

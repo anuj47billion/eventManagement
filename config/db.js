@@ -1,13 +1,13 @@
-const Sequelize = require('sequelize');
-const env = require('../env');
+import Sequelize from 'sequelize';
+import env from '../env';
 
-const User = require('../server/Models/users');
-const Module = require('../server/Models/modules');
-const Testimonial = require('../server/Models/testimonials');
-const Product = require('../server/Models/products');
+import User from '../server/Models/users';
+import Module from '../server/Models/modules';
+import Testimonial from '../server/Models/testimonials';
+import Product from '../server/Models/products';
 
 const Op = Sequelize.Op;
-const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {
+const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, null, {
   host: env.DATABASE_HOST,
   port: env.DATABASE_PORT,
   dialect: 'mysql',
@@ -46,4 +46,4 @@ const db = {
   Op
 };
 
-module.exports = db;
+export default db;

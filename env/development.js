@@ -5,7 +5,7 @@ const devConfig = {
   DATABASE_NAME: process.env.DATABASE_NAME || 'eventmanagement',
   DATABASE_HOST: process.env.DATABASE_HOST || 'localhost',
   DATABASE_USERNAME: process.env.DATABASE_USERNAME || 'root',
-  DATABASE_PASSWORD: process.env.DATABASE_PASSWORD || '',
+  DATABASE_PASSWORD: process.env.DATABASE_PASSWORD || 'password',
   DATABASE_PORT: process.env.DATABASE_PORT || 3306,
   DATABASE_DIALECT: process.env.DATABASE_DIALECT || 'mysql',
   APP_SECRET: '3c0880de0c0ae9cebdad97d1e129c0005a19b1e99d24e3beb57b2fca296ca0bbd1bf288942322dd7fdeed595c8c5e60a',
