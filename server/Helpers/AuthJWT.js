@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken');
-const settings = require('../../env');
+import jwt from 'jsonwebtoken';
+import settings from '../../env';
 
 const debug = require('debug')('eventManagement:Helpers/AuthJWT');
 
@@ -22,4 +22,4 @@ class Auth {
   }
 }
 
-module.exports = Auth;
+export default Auth;

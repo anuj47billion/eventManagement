@@ -1,5 +1,5 @@
-const express = require('express');
-const Testimonial = require('../Controllers/Testimonial');
+import express from 'express';
+import Testimonial from '../Controllers/Testimonial';
 
 const router = express.Router();
 

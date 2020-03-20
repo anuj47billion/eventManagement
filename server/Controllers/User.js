@@ -1,6 +1,6 @@
-const db = require('../../config/db');
-const ResponseObject = require('../Helpers/ResponseObject');
-const Jwt = require('../Helpers/AuthJWT');
+import db from '../../config/db';
+import ResponseObject from '../Helpers/ResponseObject';
+import Jwt from '../Helpers/AuthJWT';
 const debug = require('debug')('eventManagement: Controller/User');
 
 class Users {
@@ -63,4 +63,4 @@ class Users {
     }
   }
 }
-module.exports = Users;
+export default Users;

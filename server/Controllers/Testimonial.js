@@ -1,5 +1,5 @@
-const db = require('../../config/db');
-const ResponseObject = require('../Helpers/ResponseObject');
+import db from '../../config/db';
+import ResponseObject from '../Helpers/ResponseObject';
 
 class Testimonials {
     static async getTestimonialsList(req, res, next) {
@@ -14,4 +14,4 @@ class Testimonials {
     }
 }
 
-module.exports = Testimonials;
+export default Testimonials;

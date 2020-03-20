@@ -48,4 +48,4 @@ class ResponseObject {
   }
 }
 
-module.exports = ResponseObject;
+export default ResponseObject;

@@ -1,8 +1,8 @@
-const express = require('express');
-const userRoutes = require('./User');
-const moduleRoutes = require('./Module');
-const testimonialRoutes = require('./Testimonial');
-const ResponseObject = require('../Helpers/ResponseObject');
+import express from 'express';
+import userRoutes from './User';
+import moduleRoutes from './Module';
+import testimonialRoutes from './Testimonial';
+import ResponseObject from '../Helpers/ResponseObject';
 
 const router = express.Router();
 
@@ -22,4 +22,4 @@ router.use('/modules', moduleRoutes);
 // mount module routes at /testimonials
 router.use('/testimonials', testimonialRoutes);
 
-module.exports = router;
+export default router;
