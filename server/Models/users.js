@@ -23,6 +23,10 @@ export default function (sequelize, DataTypes) {
       type: DataTypes.STRING(150),
       allowNull: true
     },
+    salt: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     created_at: {
       type: DataTypes.DATE,
       allowNull: false,
